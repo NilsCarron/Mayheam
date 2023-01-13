@@ -62,7 +62,7 @@ public class JoystickController : MonoBehaviour, IPointerDownHandler, IPointerUp
             vecNormal.y * _speed * Time.deltaTime * fSqr);
        // _sphereTransform.eulerAngles = new Vector3(0f, Mathf.Atan2(vecNormal.x, vecNormal.y) * Mathf.Rad2Deg, 0f);
         
-
+        
 
 
     }
