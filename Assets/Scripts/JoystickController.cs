@@ -38,9 +38,10 @@ public class JoystickController : MonoBehaviour, IPointerDownHandler, IPointerUp
     {
         if (_isTouching)
         {
-            _speed  = GameManager.Instance.GetScore()  + 50;
+            _speed  = GameManager.Instance.GetScore() +1 ;
             //_sphereTransform.position += _vectorMove;
             _sphereRb.AddForce(_vectorMove);
+            
         }
 
     }

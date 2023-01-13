@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
         end = true;
         _Ending.text = "You finished the level in " + _timePlayed + " Seconds! The High Score is " ;
         
-        if((PlayerPrefs.GetFloat("highScore") < _timePlayed))
+        if((PlayerPrefs.GetFloat("highScore") < _timePlayed) && PlayerPrefs.GetFloat("highScore") != 0f)
         {
             _Ending.text = "You finished the level in " + _timePlayed + "Seconds! The high score is still at " + PlayerPrefs.GetFloat("highScore");
 
@@ -76,7 +76,8 @@ public class GameManager : MonoBehaviour
 
 
       _score += size;
-        _textMeshPro.text = _score.ToString() + " Kg";
+      
+        _textMeshPro.text = _score + " Kg";
 
     }
 
